@@ -53,7 +53,8 @@ namespace TelegramShopBot
                 {ShopClientState.DeleteAccountWarningMessageReading, accountMenu.DeleteAccountWarningMessageCallBackHandlerAsync },
                 {ShopClientState.EnteringTheDepositAmount, accountMenu.TopUpBalanceMenuCallBackHanlerAsync },
                 {ShopClientState.AfterTopUpBalance, accountMenu.AfterTopUpBalanceMessageCallBackHandlerAsync },
-                {ShopClientState.ProductOrderChoising, accountMenu.ProductOrdersMenuCallBackHandlerAsync }
+                {ShopClientState.ProductOrderChoising, accountMenu.ProductOrdersMenuCallBackHandlerAsync },
+                {ShopClientState.ProductOrderInfoReading, accountMenu.ProductOrderInfoMessageCallBackHandlerAsync }
             };
         }
 
