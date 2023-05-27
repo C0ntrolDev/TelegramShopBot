@@ -15,7 +15,10 @@ namespace TelegramShopBot
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            Directory.CreateDirectory(@"C:\\ProgramData\CDEV_TelegramShopBot\");
+            if (Directory.Exists(@"C:\\ProgramData\CDEV_TelegramShopBot\") == false)
+            {
+                Directory.CreateDirectory(@"C:\\ProgramData\CDEV_TelegramShopBot\");
+            }
             optionsBuilder.UseSqlite(@"Data Source=C:\\ProgramData\CDEV_TelegramShopBot\DataBase.db");
         }
 
