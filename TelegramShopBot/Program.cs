@@ -25,11 +25,6 @@ namespace TelegramShopBot
 
 
             Console.ReadKey();
-
-            using (DatabaseContext db = new DatabaseContext())
-            {
-                db.Database.EnsureDeleted();
-            }
             Console.WriteLine("End");
         }
     }
