@@ -6,7 +6,7 @@ namespace TelegramShopBot
 
     internal class Program
     {
-        private const string token = "6020160119:AAE9lE9GFY772o4rTJ8Jmn5kzlkAmANcNhA";
+        private const string token = "TOKEN";
 
 
 
