@@ -271,7 +271,7 @@ namespace TelegramShopBot
                             .ThenInclude(o3 => o3.Category)
                             .ToList();
 
-                        if (shopClient.ProductOrders.Count < numOfProductOrder)
+                        if (shopClient.ProductOrders.Count <= numOfProductOrder)
                         {
                             shopClient.State = ShopClientState.ProductOrderInfoReading;
                         }
@@ -279,7 +279,7 @@ namespace TelegramShopBot
                         await db.SaveChangesAsync();
                     }
 
-                    if (shopClient.ProductOrders.Count < numOfProductOrder)
+                    if (shopClient.ProductOrders.Count <= numOfProductOrder)
                     {
                         await CreateProductOrderInfoMessageAsync(botClient, chatId, (int)shopClient.ControlMessageId, shopClient.ProductOrders[numOfProductOrder - 1]);
                     }
